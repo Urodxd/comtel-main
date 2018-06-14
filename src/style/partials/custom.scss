@@ -1,0 +1,10 @@
+.custom {
+  &-ditty_news {
+    @include col;
+    @include col-12;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    font-size: 24px;
+    color: $dodgerblue;
+  }
+}

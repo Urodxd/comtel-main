@@ -1,0 +1,11 @@
+.logo {
+  &_mobile {
+    display: none;
+    @include sm(display, block);
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    width: 140px;
+    z-index: 900;
+  }
+}

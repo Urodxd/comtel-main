@@ -1,0 +1,60 @@
+.article {
+    
+    &__info {
+        @include col;
+        @include col-12;
+        display: flex;
+        @include sm(flex-wrap, wrap);
+        min-height: 250px;
+        @include sm(height, auto);
+        &:nth-child(odd) {
+          &>img {
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 10% 100%);
+            @include sm(clip-path, none);
+          }
+        }
+        &:not(:last-child) {
+            margin-bottom: 50px;
+            @include sm(border-bottom, 2px solid $dodgerblue);
+            @include sm(margin-bottom, 15px);
+        }
+
+        &:hover {
+            &>img {
+                filter: grayscale(0%) blur(0px);
+            }
+        }
+
+        &-img {
+            width: 50%;
+            height: 250px;
+            @include sm(width, 100%);
+            @include sm(height, 150px);
+            object-fit: cover;
+            transition: all .2s linear;
+            clip-path: polygon(0 0, 100% 0, 80% 100%, 0 100%);
+            @include sm(clip-path, none);
+        }
+
+        &-wrap {
+            box-sizing: border-box;
+            padding: 0 25px;
+            flex-basis: 50%;
+            @include sm(flex-basis, 100%);
+            @include sm(text-align, center);
+        }
+
+        &-title {
+            text-align: center;
+            margin-top: 15px;
+            @include sm(font-size, 22px);
+        }
+
+        /* Modification */
+        &_right {
+            flex-direction: row-reverse;
+        }
+
+    }
+
+}

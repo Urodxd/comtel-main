@@ -1,0 +1,55 @@
+.last-news{
+  width: 100%;
+  background: $dodgerblue;
+  &-grid{
+    width: 100%;
+    height: 600px;
+    @include sm(hight, 1200px);
+    &-item{
+      height: 50%;
+      @include sm(height, 200px);
+      width: 25%;
+      @include sm(width, 100%);
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      &.ln-width2{
+        height: 100%;
+        @include sm(height, 200px);
+      }
+      img{
+        object-fit: cover;
+        min-width: 100%;
+        min-height: 100%;
+      }
+      a{
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        box-sizing: border-box;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        padding: 25px 15px;
+        background: rgba($dodgerblue, .7);
+        opacity: 0;
+        @include sm(opacity, 1);
+        @include sm(background-color, transparent);
+        text-decoration: none;
+        color: white;
+        transition: all .2s linear;
+        h3{
+          @include sm(background-color, rgba($dodgerblue, .7));
+          text-align: center;
+          color: white;
+        }
+        &:hover{
+          opacity: 1;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,26 @@
+.page-numbers {
+  margin: 0 3px;
+  text-decoration: none;
+  font-family: 'Jura', sans-serif;
+  font-size: 20px;
+  color: $dodgerblue;
+  &.current{
+    position: relative;
+    margin: 0 15px;
+    color: $darkslateblue;
+    &:after,
+    &:before{
+      display: block;
+      position: absolute;
+      content: ']';
+      color: $darkslateblue;
+      top: -2px;
+      right: -10px;
+    }
+    &:before{
+      content: '[';
+      left: -10px;
+      right: auto;
+    }
+  }
+}

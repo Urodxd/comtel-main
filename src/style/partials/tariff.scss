@@ -1,0 +1,68 @@
+.tariff {
+  @include col-4;
+  @include col-sm-12;
+  margin-top: 25px;
+  margin-bottom: 100px;
+  @include sm(margin-top, 25px);
+  @include sm(margin-bottom, 25px);
+  min-width: 240px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid $dodgerblue;
+  box-shadow: 0 0 5px rgba(0,0,0,.6);
+  font-family: 'Jura', sans-serif;
+  transition: all .2s linear;
+  li{
+    padding: 15px;
+    &:nth-child(odd):not(:first-child):not(:last-child){
+      background-color: #efefef;
+    }
+  }
+  &-name{
+    background: $black;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.3rem;
+    color: white;
+  }
+  &-button{
+    background-color: $dodgerblue;
+    border: 1px solid $dodgerblue;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    transition: all .2s linear;
+    &:hover {
+      background-color: white;
+      color: $dodgerblue;
+    }
+  }
+  &-custom {
+    display: flex;
+    align-items: center;
+    &-title {
+      flex-basis: 50%;
+    }
+    &-val {
+      flex-basis: 50%;
+      margin-left: 10px;
+      color: $dodgerblue;
+      font-weight: 600;
+      font-size: 24px;
+      white-space: nowrap;
+    }
+  }
+  &-price {
+    text-align: center;
+    font-size: 32px;
+    color: $dodgerblue;
+  }
+  &:hover {
+    box-shadow: 0 0 15px rgba(0,0,0,.6);
+  }
+}

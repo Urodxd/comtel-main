@@ -1,0 +1,76 @@
+.services {
+  padding: 50px 0 150px 0;
+  @include sm(padding, 50px 0);
+  background: $white;
+  .row:first-child {
+    flex-direction: column;
+    align-items: center;
+    p {
+      margin: 50px 0 100px 0;
+      @include sm(margin, 50px 15px);
+      width: 900px;
+      @include sm(width, auto);
+      text-align: center;
+    }
+  }
+  &-block{
+    @include col;
+    @include col-6;
+    @include col-sm-12;
+    @include sm(margin-top, 15px);
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+    height: 400px;
+    &#accordion{
+      li{
+        border: 1px solid rgba(0,0,0,.2);
+        cursor: pointer;
+        transition: all .2s linear;
+        &:not(:last-child){
+          margin: 0 0 15px;
+        }
+        header{
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          box-sizing: border-box;
+          padding: 5px 15px;
+          i{
+            transition: all .2s linear;
+          }
+          i:first-child{
+            color: $dodgerblue;
+            margin: 0 15px 0 0;
+          }
+          h4{
+            flex-basis: 90%;
+            color: $black;
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-transform: uppercase;
+          }
+        }
+        article{
+          box-sizing: border-box;
+          padding: 5px 15px;
+          display: none;
+          border-top: 1px solid rgba(0,0,0,.2);
+          height: 207px;
+          p{
+            padding: 10px 0;
+          }
+          .mCSB_dragger_bar{
+            background-color: $dodgerblue;
+          }
+        }
+        &:hover{
+          box-shadow: 2px 2px 5px rgba($dodgerblue, .6);
+        }
+        &.active>header>i:last-child{
+          transform: rotate(180deg);
+        }
+      }
+    }
+  }
+}

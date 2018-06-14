@@ -1,0 +1,46 @@
+.burger {
+  @include sm(display, block);
+  display: none;
+  position: fixed;
+  width: 40px;
+  height: 40px;
+  top: 15px;
+  right: 15px;
+  z-index: 9999;
+  &>span {
+    position: absolute;
+    width: calc(100% - 2px);
+    height: 4px;
+    top: 5px;
+    left: 1px;
+    background-color: $dodgerblue;
+    border-radius: 2px;
+    box-shadow: 0 3px 3px rgba($midnightblue,.4);
+    transition: all .2s ease-out;
+    &:nth-child(2) {
+      top: calc(50% - 2px);
+      transition: all .5s ease-out;
+    }
+    &:last-child {
+      top: calc(100% - 9px);
+    }
+  }
+  &.active {
+    &>span {
+      background: #ffffff;
+      box-shadow: none;
+      &:first-child {
+        top: calc(50% - 1px);
+        transform: rotate(135deg);
+      }
+      &:nth-child(2) {
+        opacity: 0;
+        transform: scale(2.4, 2.4);
+      }
+      &:last-child {
+        top: calc(50% - 1px);
+        transform: rotate(-135deg);
+      }
+    }
+  }
+}

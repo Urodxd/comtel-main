@@ -1,0 +1,28 @@
+.breadcrumbs {
+  @include col;
+  @include col-12;
+  padding: 25px 0;
+  border-bottom: 1px solid $dodgerblue;
+  color: $dodgerblue;
+  &__link {
+    text-decoration: none;
+    color: #333333;
+    transition: all .1s linear;
+    &:hover {
+      color: $dodgerblue;
+    }
+    &.active{
+      color: $dodgerblue;
+    }
+  }
+  &__delimiter {
+    margin: 0 5px;
+    color: $dodgerblue;
+  }
+  .kb_title {
+    color: $dodgerblue;
+  }
+  .kb_sep {
+    color: #333;
+  }
+}

@@ -1,0 +1,31 @@
+.happy{
+  background-color: $dodgerblue;
+  &-block{
+    @include col;
+    @include col-12;
+    display: flex;
+    @include sm(flex-direction, column);
+    border-left: 1px solid #acfff7;
+    @include sm(border-left, none);
+    &-item{
+      flex-basis: 20%;
+      @include sm(flex-basis, 100%);
+      text-align: center;
+      border-right: 1px solid #acfff7;
+      @include sm(border-right, none);
+      color: white;
+      padding: 40px 0;
+      @include sm(padding, 30px 0);
+      @include sm(box-shadow, 0 15px 15px -15px rgba(255,255,255,.7));
+      span{
+        font-size: 4rem;
+        @include sm(font-size, 3rem);
+        font-weight: bold;
+      }
+      p{
+        @include sm(font-size, .9em);
+        text-transform: uppercase;
+      }
+    }
+  }
+}
