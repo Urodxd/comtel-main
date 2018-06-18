@@ -186,23 +186,6 @@ $(document).ready(function () {
     $('#es_txt_button_pg').val('Подписаться');
     $('#es_txt_email_pg').prop('placeholder', 'E-mail');
 
-
-    // Burger menu
-    var mobileMenu = {
-        header: $('.header'),
-        burger: $('.burger'),
-        action: burgerAction
-    };
-
-    mobileMenu.burger.on('click', function () {
-        mobileMenu.action('active')
-    });
-
-    function burgerAction(a) {
-        this.header.toggleClass(a);
-        this.burger.toggleClass(a);
-    }
-
     // Slider tariffs
     $(".owl-carousel.sliderOne").owlCarousel({
         nav: true,

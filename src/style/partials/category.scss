@@ -133,6 +133,7 @@
     // Modifications
     &_gallery {
       @include col-4;
+      @include col-sm-12;
       flex-direction: column;
       padding-bottom: 0;
       &:last-child {

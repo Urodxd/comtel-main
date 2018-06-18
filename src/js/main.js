@@ -5,5 +5,7 @@
 //= lib/owl.carousel.js
 //= lib/jquery.maskedinput.min.js
 //= lib/lightbox.min.js
+//= lib/hammer.min.js
 //= partials/app.js
 //= partials/adaptive-iframe.js
+//= partials/swipe-menu.js
